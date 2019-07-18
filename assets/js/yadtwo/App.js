@@ -1,21 +1,22 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import Header from "./includes/Header.js";
 
-class Layout extends Component {
+export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      name: "Joe"
+      name: "Gary"
     };
   }
   clickedBtn = () => {
     console.log("swag");
   };
   render() {
-    return <div>Home page</div>;
+    return (
+      <div>
+        <Header />
+      </div>
+    );
   }
 }
-
-const app = document.getElementById("app");
-
-ReactDOM.render(<Layout />, app);
