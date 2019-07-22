@@ -41,7 +41,7 @@ export default class Home extends Component {
               Child Care
             </a>
             <a href="#" className="link">
-              Lost and Found
+              Lost & Found
             </a>
             <a href="#" className="link">
               Classes
@@ -72,17 +72,22 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div>
-        <h2>Connecting the Mission-Driven Nation</h2>
-        <section className={"links"}>{this.loopCategories()}</section>
-        <section className={"trending"}>
-          <input type="text" name="search" className="search" />
-          <div className="title">
-            <i className="far fa-clock" />
-            Trending Now
-          </div>
-          <div className="trending-tags">{this.loopTags()}</div>
-        </section>
+      <div className="home">
+        <div className="container">
+          <h2>
+            Connecting the <br />
+            Mission-Driven Nation
+          </h2>
+          <section className={"links"}>{this.loopCategories()}</section>
+          <section className={"trending"}>
+            <input type="text" name="search" className="search" />
+            <div className="title">
+              <i className="far fa-clock" />
+              Trending Now
+            </div>
+            <div className="trending-tags">{this.loopTags()}</div>
+          </section>
+        </div>
       </div>
     );
   }

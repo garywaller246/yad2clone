@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
 @import "reset";
+@import "home";
 
 * {
   box-sizing: border-box;
@@ -9,8 +10,8 @@ body {
   font-family: "Roboto", sans-serif;
   background-image: linear-gradient(
       135deg,
-      rgba(57, 157, 245, 0.8) 0%,
-      rgba(138, 39, 230, 0.8) 100%
+      rgba(57, 157, 245, 0.3) 0%,
+      rgba(138, 39, 230, 0.3) 100%
     ),
     url("https://theculturetrip.com/wp-content/uploads/2015/06/shutterstock_269881304.jpg");
   background-size: cover;
@@ -66,4 +67,9 @@ header {
       color: white;
     }
   }
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
 }
