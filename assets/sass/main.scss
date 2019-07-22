@@ -1,7 +1,69 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
 @import "reset";
 
+* {
+  box-sizing: border-box;
+}
+html,
 body {
   font-family: "Roboto", sans-serif;
-  background: lightblue;
+  background-image: linear-gradient(
+      135deg,
+      rgba(57, 157, 245, 0.3) 0%,
+      rgba(138, 39, 230, 0.3) 100%
+    ),
+    url("https://theculturetrip.com/wp-content/uploads/2015/06/shutterstock_269881304.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  color: white;
+
+  .fas {
+    padding-left: 10px;
+  }
+
+  .left-menu {
+    display: flex;
+    .logo {
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .city {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 20px;
+    }
+  }
+  .right-menu {
+    display: flex;
+    .user-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .user-dropdown {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 20px;
+    }
+    .post-btn {
+      font-weight: 300;
+      text-transform: capitalize;
+      padding: 15px 20px;
+      background: #3486eb;
+      color: white;
+    }
+  }
 }
