@@ -8,9 +8,14 @@ export default class Listings extends Component {
   }
 
   render() {
+    const { match, location, history } = this.props;
     return (
       <div className="listings">
-        <div className="container">Listings Page</div>
+        <div className="container">
+          City: {match.params.city}
+          Category: {match.params.category}
+          Listings: {match.params.listings}
+        </div>
       </div>
     );
   }

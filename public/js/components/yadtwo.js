@@ -71,7 +71,7 @@ var App = function (_Component) {
           null,
           _react2.default.createElement(_Header2.default, null),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/", component: _Home2.default }),
-          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/jlm/community/artist", component: _Listings2.default })
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/:city/:category/:listings", component: _Listings2.default })
         )
       );
     }
@@ -414,13 +414,23 @@ var Listings = function (_Component) {
   _createClass(Listings, [{
     key: "render",
     value: function render() {
+      var _props = this.props,
+          match = _props.match,
+          location = _props.location,
+          history = _props.history;
+
       return _react2.default.createElement(
         "div",
         { className: "listings" },
         _react2.default.createElement(
           "div",
           { className: "container" },
-          "Listings Page"
+          "City: ",
+          match.params.city,
+          "Category: ",
+          match.params.category,
+          "Listings: ",
+          match.params.listings
         )
       );
     }

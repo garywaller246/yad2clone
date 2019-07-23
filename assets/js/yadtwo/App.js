@@ -21,7 +21,7 @@ export default class App extends Component {
         <div>
           <Header />
           <Route exact path="/" component={Home} />
-          <Route exact path="/jlm/community/artist" component={Listings} />
+          <Route exact path="/:city/:category/:listings" component={Listings} />
         </div>
       </Router>
     );
