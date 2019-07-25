@@ -1,0 +1,53 @@
+.listings_page {
+  background: white;
+
+  #filter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 50px 0;
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      label {
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-bottom: 0.8rem;
+      }
+      select {
+        background: white;
+        border-radius: 50%;
+        font-size: 1.3rem;
+        // padding: 20px;
+        min-width: 100px;
+        border: 2px solid #adbed2;
+        color: #1b1b1b;
+        margin-right: 20px;
+      }
+      &.button {
+        flex-direction: row;
+        align-items: flex-end;
+      }
+      .primary-btn {
+        padding: 10px 20px;
+        background: #2a7ddd;
+        color: white;
+      }
+      .reset-btn {
+        background: #f7f8fa;
+        &:hover {
+          background: #f7f8fa;
+        }
+      }
+      .primary-btn,
+      .reset-btn {
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px 20px;
+        margin-right: 20px;
+      }
+    }
+  }
+  #list-view {
+  }
+}

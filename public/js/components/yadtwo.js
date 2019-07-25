@@ -572,13 +572,13 @@ var Listings = function (_Component) {
 
       return _react2.default.createElement(
         "div",
-        { className: "listings" },
+        { className: "listings_page" },
         _react2.default.createElement(
           "div",
           { className: "container" },
           _react2.default.createElement(
             "section",
-            { className: "filter" },
+            { id: "filter" },
             _react2.default.createElement(
               "div",
               { className: "form-group price" },
@@ -588,21 +588,25 @@ var Listings = function (_Component) {
                 "Price"
               ),
               _react2.default.createElement(
-                "select",
-                { name: "min-price", className: "min-price" },
+                "div",
+                { className: "min-max" },
                 _react2.default.createElement(
-                  "option",
-                  { value: "0" },
-                  "0"
-                )
-              ),
-              _react2.default.createElement(
-                "select",
-                { name: "max-price", className: "max-price" },
+                  "select",
+                  { name: "min-price", className: "min-price" },
+                  _react2.default.createElement(
+                    "option",
+                    { value: "0" },
+                    "0"
+                  )
+                ),
                 _react2.default.createElement(
-                  "option",
-                  { value: "1000" },
-                  "1000"
+                  "select",
+                  { name: "max-price", className: "max-price" },
+                  _react2.default.createElement(
+                    "option",
+                    { value: "1000" },
+                    "1000"
+                  )
                 )
               )
             ),
@@ -647,19 +651,19 @@ var Listings = function (_Component) {
               { className: "form-group button" },
               _react2.default.createElement(
                 "div",
-                { className: "primary=btn" },
+                { className: "primary-btn" },
                 "Update"
               ),
               _react2.default.createElement(
                 "div",
-                { className: "reset=btn" },
+                { className: "reset-btn" },
                 "Reset"
               )
             )
           ),
           _react2.default.createElement(
             "section",
-            { className: "list-view" },
+            { id: "list-view" },
             _react2.default.createElement(
               "section",
               { className: "change-view" },

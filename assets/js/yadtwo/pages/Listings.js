@@ -10,17 +10,19 @@ export default class Listings extends Component {
   render() {
     const { match, location, history } = this.props;
     return (
-      <div className="listings">
+      <div className="listings_page">
         <div className="container">
-          <section className="filter">
+          <section id="filter">
             <div className="form-group price">
               <label>Price</label>
-              <select name="min-price" className="min-price">
-                <option value="0">0</option>
-              </select>
-              <select name="max-price" className="max-price">
-                <option value="1000">1000</option>
-              </select>
+              <div className="min-max">
+                <select name="min-price" className="min-price">
+                  <option value="0">0</option>
+                </select>
+                <select name="max-price" className="max-price">
+                  <option value="1000">1000</option>
+                </select>
+              </div>
             </div>
             <div className="form-group make">
               <label>Make</label>
@@ -35,11 +37,11 @@ export default class Listings extends Component {
               </select>
             </div>
             <div className="form-group button">
-              <div className="primary=btn">Update</div>
-              <div className="reset=btn">Reset</div>
+              <div className="primary-btn">Update</div>
+              <div className="reset-btn">Reset</div>
             </div>
           </section>
-          <section className="list-view">
+          <section id="list-view">
             <section className="change-view">
               <div className="form-group view-dropdown">
                 <select name="select-view" className="select-view">
