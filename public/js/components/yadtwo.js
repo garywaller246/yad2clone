@@ -12,11 +12,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(27);
+var _react = __webpack_require__(22);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(43);
+var _reactDom = __webpack_require__(40);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -111,11 +111,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(27);
+var _react = __webpack_require__(22);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(43);
+var _reactDom = __webpack_require__(40);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -214,11 +214,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(27);
+var _react = __webpack_require__(22);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(43);
+var _reactDom = __webpack_require__(40);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -271,9 +271,223 @@ exports.default = Category;
 /***/ }),
 
 /***/ 241:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: SyntaxError: Unexpected token (42:28)\n\n  40 |             </div>\n  41 |             <div className=\"details-column\">\n> 42 |               <div className\"date\">posted: March 30th</div>\n     |                             ^\n  43 |               <h3>Black 2016 BMW</h3>\n  44 |               <h4 className=\"price\">Black 2016 BMW</h4>\n  45 |               <div className=\"more-details\">\n");
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(22);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(40);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Details = function (_Component) {
+  _inherits(Details, _Component);
+
+  function Details() {
+    _classCallCheck(this, Details);
+
+    var _this = _possibleConstructorReturn(this, (Details.__proto__ || Object.getPrototypeOf(Details)).call(this));
+
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(Details, [{
+    key: "render",
+    value: function render() {
+      var _props = this.props,
+          match = _props.match,
+          location = _props.location,
+          history = _props.history;
+
+      return _react2.default.createElement(
+        "div",
+        { className: "details-page" },
+        _react2.default.createElement(
+          "div",
+          { className: "container" },
+          _react2.default.createElement(
+            "section",
+            { className: "submenu" },
+            _react2.default.createElement(
+              "div",
+              { className: "direction" },
+              _react2.default.createElement(
+                "div",
+                { className: "prev" },
+                "Prev"
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "next" },
+                "Next"
+              )
+            ),
+            _react2.default.createElement(
+              "nav",
+              { className: "sub-links" },
+              _react2.default.createElement(
+                "a",
+                { href: "#" },
+                "More ad by user"
+              ),
+              _react2.default.createElement(
+                "a",
+                { href: "#" },
+                "Print"
+              ),
+              _react2.default.createElement(
+                "a",
+                { href: "#" },
+                "Share"
+              ),
+              _react2.default.createElement(
+                "a",
+                { href: "#" },
+                "Contact Seller"
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "section",
+            null,
+            _react2.default.createElement(
+              "div",
+              { className: "media-column" },
+              _react2.default.createElement(
+                "div",
+                { className: "gallery" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "slider" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "main-image" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "left-arrow" },
+                      "<"
+                    ),
+                    _react2.default.createElement(
+                      "div",
+                      { className: "right-arrow" },
+                      ">"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "thumbnails" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "thumb-img" },
+                      "image"
+                    )
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "details-column" },
+              _react2.default.createElement(
+                "div",
+                { className: "date" },
+                "posted: March 30th"
+              ),
+              _react2.default.createElement(
+                "h3",
+                null,
+                "Black 2016 BMW"
+              ),
+              _react2.default.createElement(
+                "h4",
+                { className: "price" },
+                "Black 2016 BMW"
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "more-details" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "info" },
+                  _react2.default.createElement(
+                    "label",
+                    null,
+                    "Mileage"
+                  ),
+                  _react2.default.createElement(
+                    "h5",
+                    null,
+                    "12345"
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "info" },
+                  _react2.default.createElement(
+                    "label",
+                    null,
+                    "Transmission"
+                  ),
+                  _react2.default.createElement(
+                    "h5",
+                    null,
+                    "Manual"
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "info" },
+                  _react2.default.createElement(
+                    "label",
+                    null,
+                    "Vin"
+                  ),
+                  _react2.default.createElement(
+                    "h5",
+                    null,
+                    "hlnsldvn"
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "description" },
+                _react2.default.createElement(
+                  "p",
+                  null,
+                  " this is the descriptions"
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Details;
+}(_react.Component);
+
+exports.default = Details;
 
 /***/ }),
 
@@ -289,11 +503,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(27);
+var _react = __webpack_require__(22);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(43);
+var _reactDom = __webpack_require__(40);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -474,11 +688,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(27);
+var _react = __webpack_require__(22);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(43);
+var _reactDom = __webpack_require__(40);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -712,11 +926,11 @@ exports.default = Listings;
 "use strict";
 
 
-var _react = __webpack_require__(27);
+var _react = __webpack_require__(22);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(43);
+var _reactDom = __webpack_require__(40);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
