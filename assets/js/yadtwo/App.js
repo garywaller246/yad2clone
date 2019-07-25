@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import Header from "./includes/Header.js";
 import Home from "./pages/Home.js";
 import Listings from "./pages/Listings.js";
-import Item from "./pages/Item.js";
+import Details from "./pages/Details.js";
 import Category from "./pages/Category.js";
 
 export default class App extends Component {
@@ -29,7 +29,7 @@ export default class App extends Component {
           <Route
             exact
             path="/:city/:category/:listings/:item"
-            component={Item}
+            component={Details}
           />
         </div>
       </Router>

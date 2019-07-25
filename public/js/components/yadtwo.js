@@ -26,7 +26,7 @@ var _Header = __webpack_require__(239);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Home = __webpack_require__(241);
+var _Home = __webpack_require__(242);
 
 var _Home2 = _interopRequireDefault(_Home);
 
@@ -34,9 +34,9 @@ var _Listings = __webpack_require__(243);
 
 var _Listings2 = _interopRequireDefault(_Listings);
 
-var _Item = __webpack_require__(242);
+var _Details = __webpack_require__(241);
 
-var _Item2 = _interopRequireDefault(_Item);
+var _Details2 = _interopRequireDefault(_Details);
 
 var _Category = __webpack_require__(240);
 
@@ -85,7 +85,7 @@ var App = function (_Component) {
           _react2.default.createElement(_reactRouterDom.Route, {
             exact: true,
             path: "/:city/:category/:listings/:item",
-            component: _Item2.default
+            component: _Details2.default
           })
         )
       );
@@ -160,7 +160,8 @@ var Header = function (_Component) {
             _react2.default.createElement(
               "div",
               { className: "logo" },
-              "Yad 2"
+              _react2.default.createElement("i", { className: "fas fa-hands-helping" }),
+              " Yad Shtaim"
             ),
             _react2.default.createElement(
               "div",
@@ -270,6 +271,74 @@ exports.default = Category;
 /***/ }),
 
 /***/ 241:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(22);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(40);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Details = function (_Component) {
+  _inherits(Details, _Component);
+
+  function Details() {
+    _classCallCheck(this, Details);
+
+    var _this = _possibleConstructorReturn(this, (Details.__proto__ || Object.getPrototypeOf(Details)).call(this));
+
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(Details, [{
+    key: "render",
+    value: function render() {
+      var _props = this.props,
+          match = _props.match,
+          location = _props.location,
+          history = _props.history;
+
+      return _react2.default.createElement(
+        "div",
+        { className: "details-page" },
+        _react2.default.createElement(
+          "div",
+          { className: "container" },
+          "This item is ",
+          match.params.item
+        )
+      );
+    }
+  }]);
+
+  return Details;
+}(_react.Component);
+
+exports.default = Details;
+
+/***/ }),
+
+/***/ 242:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -454,74 +523,6 @@ exports.default = Home;
 
 /***/ }),
 
-/***/ 242:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(22);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(40);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Item = function (_Component) {
-  _inherits(Item, _Component);
-
-  function Item() {
-    _classCallCheck(this, Item);
-
-    var _this = _possibleConstructorReturn(this, (Item.__proto__ || Object.getPrototypeOf(Item)).call(this));
-
-    _this.state = {};
-    return _this;
-  }
-
-  _createClass(Item, [{
-    key: "render",
-    value: function render() {
-      var _props = this.props,
-          match = _props.match,
-          location = _props.location,
-          history = _props.history;
-
-      return _react2.default.createElement(
-        "div",
-        { className: "item" },
-        _react2.default.createElement(
-          "div",
-          { className: "container" },
-          "This item is ",
-          match.params.item
-        )
-      );
-    }
-  }]);
-
-  return Item;
-}(_react.Component);
-
-exports.default = Item;
-
-/***/ }),
-
 /***/ 243:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -557,6 +558,42 @@ var Listings = function (_Component) {
     _classCallCheck(this, Listings);
 
     var _this = _possibleConstructorReturn(this, (Listings.__proto__ || Object.getPrototypeOf(Listings)).call(this));
+
+    _this.loopItems = function () {
+      var testArray = [1, 2, 3, 4, 5, 6, 7];
+      return testArray.map(function (item, i) {
+        return _react2.default.createElement(
+          "div",
+          { className: "item" },
+          _react2.default.createElement(
+            "div",
+            { className: "image" },
+            _react2.default.createElement(
+              "div",
+              { className: "price" },
+              "$8900"
+            ),
+            "image"
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "details" },
+            _react2.default.createElement("i", { className: "far fa-star" }),
+            " ",
+            _react2.default.createElement(
+              "h5",
+              null,
+              "2011 BMW m3"
+            ),
+            _react2.default.createElement(
+              "h6",
+              null,
+              "Jerusalem"
+            )
+          )
+        );
+      });
+    };
 
     _this.state = {};
     return _this;
@@ -660,80 +697,61 @@ var Listings = function (_Component) {
                 "Reset"
               )
             )
-          ),
+          )
+        ),
+        _react2.default.createElement(
+          "section",
+          { id: "list-view" },
           _react2.default.createElement(
-            "section",
-            { id: "list-view" },
+            "div",
+            { className: "container" },
             _react2.default.createElement(
-              "section",
-              { className: "change-view" },
+              "div",
+              { className: "white-box" },
               _react2.default.createElement(
-                "div",
-                { className: "form-group view-dropdown" },
+                "section",
+                { className: "change-view" },
                 _react2.default.createElement(
-                  "select",
-                  { name: "select-view", className: "select-view" },
+                  "div",
+                  { className: "form-group view-dropdown" },
                   _react2.default.createElement(
-                    "option",
-                    { value: "gallery" },
-                    "Gallery View"
-                  ),
+                    "select",
+                    { name: "select-view", className: "select-view" },
+                    _react2.default.createElement(
+                      "option",
+                      { value: "gallery" },
+                      "Gallery View"
+                    ),
+                    _react2.default.createElement(
+                      "option",
+                      { value: "list" },
+                      "List View"
+                    ),
+                    _react2.default.createElement(
+                      "option",
+                      { value: "thumb" },
+                      "Thumb View"
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "form-group sort-dropdown" },
                   _react2.default.createElement(
-                    "option",
-                    { value: "list" },
-                    "List View"
-                  ),
-                  _react2.default.createElement(
-                    "option",
-                    { value: "thumb" },
-                    "Thumb View"
+                    "select",
+                    { name: "sort-dropdown", className: "sort-dropdown" },
+                    _react2.default.createElement(
+                      "option",
+                      { value: "newest" },
+                      "Newest"
+                    )
                   )
                 )
               ),
               _react2.default.createElement(
-                "div",
-                { className: "form-group sort-dropdown" },
-                _react2.default.createElement(
-                  "select",
-                  { name: "sort-dropdown", className: "sort-dropdown" },
-                  _react2.default.createElement(
-                    "option",
-                    { value: "newest" },
-                    "Newest"
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement(
-              "section",
-              { className: "all-items" },
-              _react2.default.createElement(
-                "div",
-                { className: "item" },
-                _react2.default.createElement(
-                  "div",
-                  { className: "image" },
-                  _react2.default.createElement(
-                    "div",
-                    { className: "price" },
-                    "$8900"
-                  ),
-                  "image"
-                ),
-                _react2.default.createElement(
-                  "div",
-                  { className: "details" },
-                  _react2.default.createElement(
-                    "h5",
-                    null,
-                    "Title"
-                  ),
-                  _react2.default.createElement(
-                    "h6",
-                    null,
-                    "City"
-                  )
-                )
+                "section",
+                { className: "all-items" },
+                this.loopItems()
               )
             )
           )

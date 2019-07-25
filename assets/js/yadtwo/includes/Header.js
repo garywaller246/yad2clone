@@ -16,7 +16,9 @@ export default class Header extends Component {
       <div className="container">
         <header>
           <div className={"left-menu"}>
-            <div className={"logo"}>Yad 2</div>
+            <div className={"logo"}>
+              <i className="fas fa-hands-helping" /> Yad Shtaim
+            </div>
             <div className={"city"}>
               Jerusalem
               <i className={`fas fa-chevron-down`} />

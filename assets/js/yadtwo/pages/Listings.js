@@ -7,6 +7,24 @@ export default class Listings extends Component {
     this.state = {};
   }
 
+  loopItems = () => {
+    let testArray = [1, 2, 3, 4, 5, 6, 7];
+    return testArray.map((item, i) => {
+      return (
+        <div className="item">
+          <div className="image">
+            <div className="price">$8900</div>
+            image
+          </div>
+          <div className="details">
+            <i className="far fa-star" /> <h5>2011 BMW m3</h5>
+            <h6>Jerusalem</h6>
+          </div>
+        </div>
+      );
+    });
+  };
+
   render() {
     const { match, location, history } = this.props;
     return (
@@ -41,35 +59,28 @@ export default class Listings extends Component {
               <div className="reset-btn">Reset</div>
             </div>
           </section>
-          <section id="list-view">
-            <section className="change-view">
-              <div className="form-group view-dropdown">
-                <select name="select-view" className="select-view">
-                  <option value="gallery">Gallery View</option>
-                  <option value="list">List View</option>
-                  <option value="thumb">Thumb View</option>
-                </select>
-              </div>
-              <div className="form-group sort-dropdown">
-                <select name="sort-dropdown" className="sort-dropdown">
-                  <option value="newest">Newest</option>
-                </select>
-              </div>
-            </section>
-            <section className="all-items">
-              <div className="item">
-                <div className="image">
-                  <div className="price">$8900</div>
-                  image
-                </div>
-                <div className="details">
-                  <h5>Title</h5>
-                  <h6>City</h6>
-                </div>
-              </div>
-            </section>
-          </section>
         </div>
+        <section id="list-view">
+          <div className="container">
+            <div className="white-box">
+              <section className="change-view">
+                <div className="form-group view-dropdown">
+                  <select name="select-view" className="select-view">
+                    <option value="gallery">Gallery View</option>
+                    <option value="list">List View</option>
+                    <option value="thumb">Thumb View</option>
+                  </select>
+                </div>
+                <div className="form-group sort-dropdown">
+                  <select name="sort-dropdown" className="sort-dropdown">
+                    <option value="newest">Newest</option>
+                  </select>
+                </div>
+              </section>
+              <section className="all-items">{this.loopItems()}</section>
+            </div>
+          </div>
+        </section>
       </div>
     );
   }
