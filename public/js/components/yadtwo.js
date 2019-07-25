@@ -325,156 +325,231 @@ var Details = function (_Component) {
           "div",
           { className: "container" },
           _react2.default.createElement(
-            "section",
-            { className: "submenu" },
+            "div",
+            { className: "white-box" },
             _react2.default.createElement(
-              "div",
-              { className: "direction" },
+              "section",
+              { className: "submenu" },
               _react2.default.createElement(
                 "div",
-                { className: "prev" },
-                "Prev"
+                { className: "direction" },
+                _react2.default.createElement(
+                  "a",
+                  { href: "#", className: "prev" },
+                  "Prev"
+                ),
+                _react2.default.createElement(
+                  "a",
+                  { href: "#", className: "next" },
+                  "Next"
+                )
               ),
               _react2.default.createElement(
-                "div",
-                { className: "next" },
-                "Next"
+                "nav",
+                { className: "sub-links" },
+                _react2.default.createElement(
+                  "a",
+                  { href: "#" },
+                  "More ad by user"
+                ),
+                _react2.default.createElement(
+                  "a",
+                  { href: "#" },
+                  "Print"
+                ),
+                _react2.default.createElement(
+                  "a",
+                  { href: "#" },
+                  "Share"
+                ),
+                _react2.default.createElement(
+                  "a",
+                  { href: "#" },
+                  "Contact Seller"
+                )
               )
             ),
             _react2.default.createElement(
-              "nav",
-              { className: "sub-links" },
-              _react2.default.createElement(
-                "a",
-                { href: "#" },
-                "More ad by user"
-              ),
-              _react2.default.createElement(
-                "a",
-                { href: "#" },
-                "Print"
-              ),
-              _react2.default.createElement(
-                "a",
-                { href: "#" },
-                "Share"
-              ),
-              _react2.default.createElement(
-                "a",
-                { href: "#" },
-                "Contact Seller"
-              )
-            )
-          ),
-          _react2.default.createElement(
-            "section",
-            null,
-            _react2.default.createElement(
-              "div",
-              { className: "media-column" },
+              "section",
+              { className: "content-area" },
               _react2.default.createElement(
                 "div",
-                { className: "gallery" },
+                { className: "media-column" },
                 _react2.default.createElement(
                   "div",
-                  { className: "slider" },
+                  { className: "gallery" },
                   _react2.default.createElement(
                     "div",
-                    { className: "main-image" },
+                    { className: "slider" },
                     _react2.default.createElement(
                       "div",
-                      { className: "left-arrow" },
-                      "<"
+                      { className: "main-image" },
+                      _react2.default.createElement(
+                        "div",
+                        { className: "arrows left-arrow" },
+                        "<"
+                      ),
+                      _react2.default.createElement(
+                        "div",
+                        { className: "arrows right-arrow" },
+                        ">"
+                      ),
+                      _react2.default.createElement("div", {
+                        className: "image-1",
+                        style: {
+                          "background-image": "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
+                        }
+                      })
                     ),
                     _react2.default.createElement(
                       "div",
-                      { className: "right-arrow" },
-                      ">"
+                      { className: "thumbnails" },
+                      _react2.default.createElement(
+                        "div",
+                        {
+                          className: "thumb-img",
+                          style: {
+                            "background-image": "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
+                          }
+                        },
+                        "image"
+                      ),
+                      _react2.default.createElement(
+                        "div",
+                        {
+                          className: "thumb-img",
+                          style: {
+                            "background-image": "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
+                          }
+                        },
+                        "image"
+                      ),
+                      _react2.default.createElement(
+                        "div",
+                        {
+                          className: "thumb-img",
+                          style: {
+                            "background-image": "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
+                          }
+                        },
+                        "image"
+                      ),
+                      _react2.default.createElement(
+                        "div",
+                        {
+                          className: "thumb-img",
+                          style: {
+                            "background-image": "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
+                          }
+                        },
+                        "image"
+                      ),
+                      _react2.default.createElement(
+                        "div",
+                        {
+                          className: "thumb-img",
+                          style: {
+                            "background-image": "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
+                          }
+                        },
+                        "image"
+                      ),
+                      _react2.default.createElement(
+                        "div",
+                        {
+                          className: "thumb-img",
+                          style: {
+                            "background-image": "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
+                          }
+                        },
+                        "image"
+                      ),
+                      _react2.default.createElement(
+                        "div",
+                        {
+                          className: "thumb-img",
+                          style: {
+                            "background-image": "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
+                          }
+                        },
+                        "image"
+                      )
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "details-column" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "date" },
+                  "posted: March 30th"
+                ),
+                _react2.default.createElement(
+                  "h3",
+                  null,
+                  "Black 2016 BMW"
+                ),
+                _react2.default.createElement(
+                  "h4",
+                  { className: "price" },
+                  "Black 2016 BMW"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "more-details" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "info" },
+                    _react2.default.createElement(
+                      "label",
+                      null,
+                      "Mileage"
+                    ),
+                    _react2.default.createElement(
+                      "h5",
+                      null,
+                      "12345"
                     )
                   ),
                   _react2.default.createElement(
                     "div",
-                    { className: "thumbnails" },
+                    { className: "info" },
                     _react2.default.createElement(
-                      "div",
-                      { className: "thumb-img" },
-                      "image"
+                      "label",
+                      null,
+                      "Transmission"
+                    ),
+                    _react2.default.createElement(
+                      "h5",
+                      null,
+                      "Manual"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "info" },
+                    _react2.default.createElement(
+                      "label",
+                      null,
+                      "Vin"
+                    ),
+                    _react2.default.createElement(
+                      "h5",
+                      null,
+                      "hlnsldvn"
                     )
                   )
-                )
-              )
-            ),
-            _react2.default.createElement(
-              "div",
-              { className: "details-column" },
-              _react2.default.createElement(
-                "div",
-                { className: "date" },
-                "posted: March 30th"
-              ),
-              _react2.default.createElement(
-                "h3",
-                null,
-                "Black 2016 BMW"
-              ),
-              _react2.default.createElement(
-                "h4",
-                { className: "price" },
-                "Black 2016 BMW"
-              ),
-              _react2.default.createElement(
-                "div",
-                { className: "more-details" },
-                _react2.default.createElement(
-                  "div",
-                  { className: "info" },
-                  _react2.default.createElement(
-                    "label",
-                    null,
-                    "Mileage"
-                  ),
-                  _react2.default.createElement(
-                    "h5",
-                    null,
-                    "12345"
-                  )
                 ),
                 _react2.default.createElement(
                   "div",
-                  { className: "info" },
+                  { className: "description" },
                   _react2.default.createElement(
-                    "label",
+                    "p",
                     null,
-                    "Transmission"
-                  ),
-                  _react2.default.createElement(
-                    "h5",
-                    null,
-                    "Manual"
+                    " this is the descriptions"
                   )
-                ),
-                _react2.default.createElement(
-                  "div",
-                  { className: "info" },
-                  _react2.default.createElement(
-                    "label",
-                    null,
-                    "Vin"
-                  ),
-                  _react2.default.createElement(
-                    "h5",
-                    null,
-                    "hlnsldvn"
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                "div",
-                { className: "description" },
-                _react2.default.createElement(
-                  "p",
-                  null,
-                  " this is the descriptions"
                 )
               )
             )
