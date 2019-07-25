@@ -397,7 +397,7 @@ var Details = function (_Component) {
                       _react2.default.createElement("div", {
                         className: "image-1",
                         style: {
-                          "background-image": "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
+                          backgroundImage: "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
                         }
                       })
                     ),
@@ -409,7 +409,7 @@ var Details = function (_Component) {
                         {
                           className: "thumb-img",
                           style: {
-                            "background-image": "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
+                            backgroundImage: "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
                           }
                         },
                         "image"
@@ -419,7 +419,7 @@ var Details = function (_Component) {
                         {
                           className: "thumb-img",
                           style: {
-                            "background-image": "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
+                            backgroundImage: "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
                           }
                         },
                         "image"
@@ -429,7 +429,7 @@ var Details = function (_Component) {
                         {
                           className: "thumb-img",
                           style: {
-                            "background-image": "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
+                            backgroundImage: "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
                           }
                         },
                         "image"
@@ -439,7 +439,7 @@ var Details = function (_Component) {
                         {
                           className: "thumb-img",
                           style: {
-                            "background-image": "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
+                            backgroundImage: "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
                           }
                         },
                         "image"
@@ -449,7 +449,7 @@ var Details = function (_Component) {
                         {
                           className: "thumb-img",
                           style: {
-                            "background-image": "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
+                            backgroundImage: "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
                           }
                         },
                         "image"
@@ -459,7 +459,7 @@ var Details = function (_Component) {
                         {
                           className: "thumb-img",
                           style: {
-                            "background-image": "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
+                            backgroundImage: "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
                           }
                         },
                         "image"
@@ -469,7 +469,7 @@ var Details = function (_Component) {
                         {
                           className: "thumb-img",
                           style: {
-                            "background-image": "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
+                            backgroundImage: "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
                           }
                         },
                         "image"
@@ -488,17 +488,59 @@ var Details = function (_Component) {
                 ),
                 _react2.default.createElement(
                   "h3",
-                  null,
+                  { className: "title" },
                   "Black 2016 BMW"
                 ),
                 _react2.default.createElement(
                   "h4",
                   { className: "price" },
-                  "Black 2016 BMW"
+                  "$77,000"
                 ),
                 _react2.default.createElement(
                   "div",
                   { className: "more-details" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "info" },
+                    _react2.default.createElement(
+                      "label",
+                      null,
+                      "Mileage"
+                    ),
+                    _react2.default.createElement(
+                      "h5",
+                      null,
+                      "12345"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "info" },
+                    _react2.default.createElement(
+                      "label",
+                      null,
+                      "Transmission"
+                    ),
+                    _react2.default.createElement(
+                      "h5",
+                      null,
+                      "Manual"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "info" },
+                    _react2.default.createElement(
+                      "label",
+                      null,
+                      "Vin"
+                    ),
+                    _react2.default.createElement(
+                      "h5",
+                      null,
+                      "hlnsldvn"
+                    )
+                  ),
                   _react2.default.createElement(
                     "div",
                     { className: "info" },
@@ -546,9 +588,24 @@ var Details = function (_Component) {
                   "div",
                   { className: "description" },
                   _react2.default.createElement(
+                    "label",
+                    null,
+                    "Description"
+                  ),
+                  _react2.default.createElement(
                     "p",
                     null,
-                    " this is the descriptions"
+                    "Cars came into global use during the 20th century, and developed economies depend on them. The year 1886 is regarded as the birth year of the modern car when German inventor Karl Benz patented his Benz Patent-Motorwagen. Cars became widely available in the early 20th century. One of the first cars accessible to the masses was the 1908 Model T, an American car manufactured by the Ford Motor Company. Cars were rapidly adopted in the US, where they replaced animal-drawn carriages and carts, but took much longer to be accepted in Western Europe and other parts of the world."
+                  ),
+                  _react2.default.createElement(
+                    "p",
+                    null,
+                    "Cars came into global use during the 20th century, and developed economies depend on them. The year 1886 is regarded as the birth year of the modern car when German inventor Karl Benz patented his Benz Patent-Motorwagen. Cars became widely available in the early 20th century. One of the first cars accessible to the masses was the 1908 Model T, an American car manufactured by the Ford Motor Company. Cars were rapidly adopted in the US, where they replaced animal-drawn carriages and carts, but took much longer to be accepted in Western Europe and other parts of the world."
+                  ),
+                  _react2.default.createElement(
+                    "p",
+                    null,
+                    "Cars came into global use during the 20th century, and developed economies depend on them. The year 1886 is regarded as the birth year of the modern car when German inventor Karl Benz patented his Benz Patent-Motorwagen. Cars became widely available in the early 20th century. One of the first cars accessible to the masses was the 1908 Model T, an American car manufactured by the Ford Motor Company. Cars were rapidly adopted in the US, where they replaced animal-drawn carriages and carts, but took much longer to be accepted in Western Europe and other parts of the world."
                   )
                 )
               )
