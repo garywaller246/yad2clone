@@ -12,15 +12,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(22);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(40);
+var _reactDom = __webpack_require__(33);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRouterDom = __webpack_require__(559);
+var _reactRouterDom = __webpack_require__(560);
 
 var _Header = __webpack_require__(239);
 
@@ -111,11 +111,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(22);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(40);
+var _reactDom = __webpack_require__(33);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -214,11 +214,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(22);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(40);
+var _reactDom = __webpack_require__(33);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -282,13 +282,17 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(22);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(40);
+var _reactDom = __webpack_require__(33);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _Gallery = __webpack_require__(244);
+
+var _Gallery2 = _interopRequireDefault(_Gallery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -375,108 +379,7 @@ var Details = function (_Component) {
               _react2.default.createElement(
                 "div",
                 { className: "media-column" },
-                _react2.default.createElement(
-                  "div",
-                  { className: "gallery" },
-                  _react2.default.createElement(
-                    "div",
-                    { className: "slider" },
-                    _react2.default.createElement(
-                      "div",
-                      { className: "main-image" },
-                      _react2.default.createElement(
-                        "div",
-                        { className: "arrows left-arrow" },
-                        "<"
-                      ),
-                      _react2.default.createElement(
-                        "div",
-                        { className: "arrows right-arrow" },
-                        ">"
-                      ),
-                      _react2.default.createElement("div", {
-                        className: "image-1",
-                        style: {
-                          backgroundImage: "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
-                        }
-                      })
-                    ),
-                    _react2.default.createElement(
-                      "div",
-                      { className: "thumbnails" },
-                      _react2.default.createElement(
-                        "div",
-                        {
-                          className: "thumb-img",
-                          style: {
-                            backgroundImage: "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
-                          }
-                        },
-                        "image"
-                      ),
-                      _react2.default.createElement(
-                        "div",
-                        {
-                          className: "thumb-img",
-                          style: {
-                            backgroundImage: "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
-                          }
-                        },
-                        "image"
-                      ),
-                      _react2.default.createElement(
-                        "div",
-                        {
-                          className: "thumb-img",
-                          style: {
-                            backgroundImage: "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
-                          }
-                        },
-                        "image"
-                      ),
-                      _react2.default.createElement(
-                        "div",
-                        {
-                          className: "thumb-img",
-                          style: {
-                            backgroundImage: "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
-                          }
-                        },
-                        "image"
-                      ),
-                      _react2.default.createElement(
-                        "div",
-                        {
-                          className: "thumb-img",
-                          style: {
-                            backgroundImage: "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
-                          }
-                        },
-                        "image"
-                      ),
-                      _react2.default.createElement(
-                        "div",
-                        {
-                          className: "thumb-img",
-                          style: {
-                            backgroundImage: "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
-                          }
-                        },
-                        "image"
-                      ),
-                      _react2.default.createElement(
-                        "div",
-                        {
-                          className: "thumb-img",
-                          style: {
-                            backgroundImage: "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
-                          }
-                        },
-                        "image"
-                      )
-                    )
-                  )
-                )
+                _react2.default.createElement(_Gallery2.default, null)
               ),
               _react2.default.createElement(
                 "div",
@@ -635,11 +538,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(22);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(40);
+var _reactDom = __webpack_require__(33);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -820,11 +723,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(22);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(40);
+var _reactDom = __webpack_require__(33);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -1058,11 +961,116 @@ exports.default = Listings;
 "use strict";
 
 
-var _react = __webpack_require__(22);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(40);
+var _reactDom = __webpack_require__(33);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Gallery = function (_Component) {
+  _inherits(Gallery, _Component);
+
+  function Gallery() {
+    _classCallCheck(this, Gallery);
+
+    var _this = _possibleConstructorReturn(this, (Gallery.__proto__ || Object.getPrototypeOf(Gallery)).call(this));
+
+    _this.allImagesLoop = function () {
+      return _this.state.allImages.map(function (item, i) {
+        return _react2.default.createElement("div", {
+          key: i,
+          className: "thumb-img",
+          style: {
+            backgroundImage: "url('" + item + "')"
+          }
+        });
+      });
+    };
+
+    _this.state = {
+      allImages: ["https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg", "https://www.extremetech.com/wp-content/uploads/2016/10/2013-Buick-Verano-009-640x427.jpg", "https://server86.texasdirectauto.com/1N4AA6AP1HC456279/001_0001.jpg", "https://cdn.hswstatic.com/gif/10-used-car-online-tips-orig.jpg", "https://www.wired.com/images_blogs/autopia/2009/10/usedcar.jpg", "https://amp.businessinsider.com/images/5138ca2669bedd141300000e-750-548.jpg"]
+    };
+    return _this;
+  }
+
+  _createClass(Gallery, [{
+    key: "render",
+    value: function render() {
+      var _props = this.props,
+          match = _props.match,
+          location = _props.location,
+          history = _props.history;
+
+      return _react2.default.createElement(
+        "div",
+        { className: "gallery" },
+        _react2.default.createElement(
+          "div",
+          { className: "slider" },
+          _react2.default.createElement(
+            "div",
+            { className: "main-image" },
+            _react2.default.createElement(
+              "div",
+              { className: "arrows left-arrow" },
+              "<"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "arrows right-arrow" },
+              ">"
+            ),
+            _react2.default.createElement("div", {
+              className: "image-1",
+              style: {
+                backgroundImage: "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
+              }
+            })
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "thumbnails" },
+            this.allImagesLoop()
+          )
+        )
+      );
+    }
+  }]);
+
+  return Gallery;
+}(_react.Component);
+
+exports.default = Gallery;
+
+/***/ }),
+
+/***/ 245:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _react = __webpack_require__(18);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(33);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -1078,4 +1086,4 @@ _reactDom2.default.render(_react2.default.createElement(_App2.default, null), ap
 
 /***/ })
 
-},[244]);
+},[245]);

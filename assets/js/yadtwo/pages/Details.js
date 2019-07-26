@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import Gallery from "./components/Gallery.js";
 
 export default class Details extends Component {
   constructor() {
@@ -29,89 +30,10 @@ export default class Details extends Component {
                 <a href="#">Contact Seller</a>
               </nav>
             </section>
+
             <section className="content-area">
               <div className="media-column">
-                <div className="gallery">
-                  <div className="slider">
-                    <div className="main-image">
-                      <div className="arrows left-arrow">{"<"}</div>
-                      <div className="arrows right-arrow">{">"}</div>
-                      <div
-                        className="image-1"
-                        style={{
-                          backgroundImage:
-                            "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
-                        }}
-                      />
-                    </div>
-
-                    <div className="thumbnails">
-                      <div
-                        className="thumb-img"
-                        style={{
-                          backgroundImage:
-                            "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
-                        }}
-                      >
-                        image
-                      </div>
-                      <div
-                        className="thumb-img"
-                        style={{
-                          backgroundImage:
-                            "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
-                        }}
-                      >
-                        image
-                      </div>
-                      <div
-                        className="thumb-img"
-                        style={{
-                          backgroundImage:
-                            "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
-                        }}
-                      >
-                        image
-                      </div>
-                      <div
-                        className="thumb-img"
-                        style={{
-                          backgroundImage:
-                            "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
-                        }}
-                      >
-                        image
-                      </div>
-                      <div
-                        className="thumb-img"
-                        style={{
-                          backgroundImage:
-                            "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
-                        }}
-                      >
-                        image
-                      </div>
-                      <div
-                        className="thumb-img"
-                        style={{
-                          backgroundImage:
-                            "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
-                        }}
-                      >
-                        image
-                      </div>
-                      <div
-                        className="thumb-img"
-                        style={{
-                          backgroundImage:
-                            "url(https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg)"
-                        }}
-                      >
-                        image
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <Gallery />
               </div>
               <div className="details-column">
                 <div className="date">posted: March 30th</div>
