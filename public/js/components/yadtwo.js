@@ -1063,12 +1063,12 @@ var Gallery = function (_Component) {
             _react2.default.createElement(
               "div",
               { className: "arrows left-arrow", onClick: this.prevBtn },
-              "<"
+              _react2.default.createElement("i", { className: "fas fa-chevron-left" })
             ),
             _react2.default.createElement(
               "div",
               { className: "arrows right-arrow", onClick: this.nextBtn },
-              ">"
+              _react2.default.createElement("i", { className: "fas fa-chevron-right" })
             ),
             _react2.default.createElement("div", {
               className: "image-1",

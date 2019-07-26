@@ -70,10 +70,10 @@ export default class Gallery extends Component {
         <div className="slider">
           <div className="main-image">
             <div className="arrows left-arrow" onClick={this.prevBtn}>
-              {"<"}
+              <i className="fas fa-chevron-left" />
             </div>
             <div className="arrows right-arrow" onClick={this.nextBtn}>
-              {">"}
+              <i className="fas fa-chevron-right" />
             </div>
             <div
               className="image-1"

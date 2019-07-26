@@ -37,11 +37,11 @@
               padding: 0 15px;
               height: 100%;
               position: absolute;
-              background: rgba(0, 0, 0, 0.5);
+              background: rgba(0, 0, 0, 0.3);
               display: flex;
               align-items: center;
               justify-content: center;
-              font-size: 3rem;
+              font-size: 1.8rem;
               color: white;
               cursor: pointer;
 
@@ -62,8 +62,11 @@
           }
         }
         .thumbnails {
+          padding: 5px 0px;
           display: grid;
           grid-template-columns: repeat(6, 1fr);
+          grid-gap: 5px;
+
           .thumb-img {
             // background-image: url("https://cdn.motor1.com/images/mgl/17XG3/s1/bugatti-la-voiture-noire-leaves-geneva.jpg");
             width: 100px;
@@ -71,6 +74,7 @@
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
+            cursor: pointer;
           }
         }
       }
