@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 244:
+/***/ 245:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -119,6 +119,10 @@ var _reactDom = __webpack_require__(34);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _axios = __webpack_require__(156);
+
+var _axios2 = _interopRequireDefault(_axios);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -140,12 +144,29 @@ var Header = function (_Component) {
     };
 
     _this.state = {
-      name: "Gary"
+      name: "Gary",
+      cityDropdown: false,
+      selectedCity: "jlm",
+      citiesData: []
     };
     return _this;
   }
 
   _createClass(Header, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      var self = this;
+      _axios2.default.get("/api/cities").then(function (response) {
+        self.setState({
+          citiesData: response.data
+        }, function () {
+          console.log(self.state);
+        });
+      }).catch(function (error) {
+        console.log(error);
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return _react2.default.createElement(
@@ -167,7 +188,25 @@ var Header = function (_Component) {
               "div",
               { className: "city" },
               "Jerusalem",
-              _react2.default.createElement("i", { className: "fas fa-chevron-down" })
+              _react2.default.createElement("i", { className: "fas fa-chevron-down" }),
+              _react2.default.createElement(
+                "div",
+                { className: "dropdown" },
+                _react2.default.createElement(
+                  "ul",
+                  null,
+                  _react2.default.createElement(
+                    "li",
+                    null,
+                    "Tel Aviv"
+                  ),
+                  _react2.default.createElement(
+                    "li",
+                    null,
+                    "Haifa"
+                  )
+                )
+              )
             )
           ),
           _react2.default.createElement(
@@ -546,7 +585,7 @@ var _reactDom = __webpack_require__(34);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _axios = __webpack_require__(248);
+var _axios = __webpack_require__(156);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -642,7 +681,7 @@ var Home = function (_Component) {
         history.push("/jlm");
       }
       var self = this;
-      _axios2.default.get("/api/" + match.params.city + "/categories").then(function (response) {
+      _axios2.default.get("/api/" + match.params.city).then(function (response) {
         self.setState({
           categoriesData: response.data
         }, function () {
@@ -1098,7 +1137,7 @@ var _reactDom = __webpack_require__(34);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _App = __webpack_require__(244);
+var _App = __webpack_require__(245);
 
 var _App2 = _interopRequireDefault(_App);
 

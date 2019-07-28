@@ -18,9 +18,10 @@ export default class Home extends Component {
     if (match.params.city == undefined) {
       history.push("/jlm");
     }
+
     const self = this;
     axios
-      .get(`/api/${match.params.city}/categories`)
+      .get(`/api/${match.params.city}`)
       .then(function(response) {
         self.setState(
           {

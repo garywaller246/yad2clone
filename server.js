@@ -15,14 +15,27 @@ const app = express();
 app.use("/", serveStatic(path.join(__dirname, "/public")));
 
 //api
+// shows all cities available
 app.get("/api/cities", function(req, res) {
   res.json(citiesData);
 });
 
+//shows all categories for a city
+app.get("/api/:city", function(req, res) {
+  res.json(categoriesData);
+});
+
+// show all items for that category
 app.get("/api/:city/:categories", function(req, res) {
   res.json(categoriesData);
 });
 
+// show all items for that listing
+app.get("/api/:city/:categories/:listing", function(req, res) {
+  res.json(itemsData);
+});
+
+// shows item selected
 app.get("/api/:city/:categories/:listing/:item", function(req, res) {
   res.json(itemsData);
 });

@@ -1,13 +1,37 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import axios from "axios";
 
 export default class Header extends Component {
   constructor() {
     super();
     this.state = {
-      name: "Gary"
+      name: "Gary",
+      cityDropdown: false,
+      selectedCity: "jlm",
+      citiesData: []
     };
   }
+
+  componentWillMount() {
+    const self = this;
+    axios
+      .get(`/api/cities`)
+      .then(function(response) {
+        self.setState(
+          {
+            citiesData: response.data
+          },
+          () => {
+            console.log(self.state);
+          }
+        );
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  }
+
   clickedBtn = () => {
     console.log("swag");
   };
@@ -22,6 +46,12 @@ export default class Header extends Component {
             <div className={"city"}>
               Jerusalem
               <i className={`fas fa-chevron-down`} />
+              <div className={`dropdown`}>
+                <ul>
+                  <li>Tel Aviv</li>
+                  <li>Haifa</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div className={"right-menu"}>
