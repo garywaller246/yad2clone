@@ -77,7 +77,7 @@ var App = function (_Component) {
         _react2.default.createElement(
           "div",
           null,
-          _react2.default.createElement(_Header2.default, null),
+          _react2.default.createElement(_reactRouterDom.Route, { path: "/", component: _Header2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/", component: _Home2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/:city", component: _Home2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/:city/:category", component: _Category2.default }),
@@ -139,14 +139,42 @@ var Header = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
 
-    _this.clickedBtn = function () {
-      console.log("swag");
+    _this.clickedCityDropdown = function () {
+      _this.setState({
+        cityDropdown: !_this.state.cityDropdown
+      });
+    };
+
+    _this.selectCity = function (city) {
+      _this.setState({
+        selectedCity: city
+      }, function () {
+        var city = _this.state.citiesData.filter(function (item) {
+          return item.title == _this.state.selectedCity;
+        });
+        var _this$props = _this.props,
+            match = _this$props.match,
+            history = _this$props.history;
+
+        history.push("/" + city[0].slug);
+      });
+    };
+
+    _this.loopCities = function () {
+      var self = _this;
+      return _this.state.citiesData.map(function (item, i) {
+        return _react2.default.createElement(
+          "li",
+          { key: i, onClick: _this.selectCity.bind(null, item.title) },
+          item.title
+        );
+      });
     };
 
     _this.state = {
       name: "Gary",
       cityDropdown: false,
-      selectedCity: "jlm",
+      selectedCity: "Jerusalem",
       citiesData: []
     };
     return _this;
@@ -186,25 +214,20 @@ var Header = function (_Component) {
             ),
             _react2.default.createElement(
               "div",
-              { className: "city" },
-              "Jerusalem",
-              _react2.default.createElement("i", { className: "fas fa-chevron-down" }),
+              { className: "city-dropdown", onClick: this.clickedCityDropdown },
+              this.state.selectedCity,
+              _react2.default.createElement("i", {
+                className: "fas fa-chevron-down " + (this.state.cityDropdown ? "fa-chevron-up" : "fa-chevron-down")
+              }),
               _react2.default.createElement(
                 "div",
-                { className: "dropdown" },
+                {
+                  className: "scroll-area " + (this.state.cityDropdown ? "active" : "")
+                },
                 _react2.default.createElement(
                   "ul",
                   null,
-                  _react2.default.createElement(
-                    "li",
-                    null,
-                    "Tel Aviv"
-                  ),
-                  _react2.default.createElement(
-                    "li",
-                    null,
-                    "Haifa"
-                  )
+                  this.loopCities()
                 )
               )
             )
@@ -680,6 +703,7 @@ var Home = function (_Component) {
       if (match.params.city == undefined) {
         history.push("/jlm");
       }
+
       var self = this;
       _axios2.default.get("/api/" + match.params.city).then(function (response) {
         self.setState({

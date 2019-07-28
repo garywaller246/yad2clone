@@ -8,7 +8,7 @@ export default class Header extends Component {
     this.state = {
       name: "Gary",
       cityDropdown: false,
-      selectedCity: "jlm",
+      selectedCity: "Jerusalem",
       citiesData: []
     };
   }
@@ -32,9 +32,38 @@ export default class Header extends Component {
       });
   }
 
-  clickedBtn = () => {
-    console.log("swag");
+  clickedCityDropdown = () => {
+    this.setState({
+      cityDropdown: !this.state.cityDropdown
+    });
   };
+
+  selectCity = city => {
+    this.setState(
+      {
+        selectedCity: city
+      },
+      () => {
+        let city = this.state.citiesData.filter(item => {
+          return item.title == this.state.selectedCity;
+        });
+        const { match, history } = this.props;
+        history.push(`/${city[0].slug}`);
+      }
+    );
+  };
+
+  loopCities = () => {
+    const self = this;
+    return this.state.citiesData.map((item, i) => {
+      return (
+        <li key={i} onClick={this.selectCity.bind(null, item.title)}>
+          {item.title}
+        </li>
+      );
+    });
+  };
+
   render() {
     return (
       <div className="container">
@@ -43,14 +72,19 @@ export default class Header extends Component {
             <div className={"logo"}>
               <i className="fas fa-hands-helping" /> Yad Shtaim
             </div>
-            <div className={"city"}>
-              Jerusalem
-              <i className={`fas fa-chevron-down`} />
-              <div className={`dropdown`}>
-                <ul>
-                  <li>Tel Aviv</li>
-                  <li>Haifa</li>
-                </ul>
+            <div className={"city-dropdown"} onClick={this.clickedCityDropdown}>
+              {this.state.selectedCity}
+              <i
+                className={`fas fa-chevron-down ${
+                  this.state.cityDropdown ? "fa-chevron-up" : "fa-chevron-down"
+                }`}
+              />
+              <div
+                className={`scroll-area ${
+                  this.state.cityDropdown ? "active" : ""
+                }`}
+              >
+                <ul>{this.loopCities()}</ul>
               </div>
             </div>
           </div>

@@ -21,7 +21,7 @@ export default class App extends Component {
     return (
       <Router>
         <div>
-          <Header />
+          <Route path="/" component={Header} />
           <Route exact path="/" component={Home} />
           <Route exact path="/:city" component={Home} />
           <Route exact path="/:city/:category" component={Category} />
