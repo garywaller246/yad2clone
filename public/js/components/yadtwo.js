@@ -571,8 +571,23 @@ var Home = function (_Component) {
     };
 
     _this.loopCategories = function () {
+      // is statement for data
       if (_this.state.categoriesData != "") {
+        //return back the loop of category
         return _this.state.categoriesData.map(function (category, i) {
+          var loopListings = function loopListings() {
+            return category.listings.map(function (listing, index) {
+              return _react2.default.createElement(
+                "a",
+                {
+                  href: category.title + "/" + listing.slug,
+                  className: "link",
+                  key: index
+                },
+                listing.name
+              );
+            });
+          };
           return _react2.default.createElement(
             "div",
             { className: "categories", key: i },
@@ -583,12 +598,10 @@ var Home = function (_Component) {
             ),
             _react2.default.createElement(
               "div",
-              { className: "group-links" },
-              _react2.default.createElement(
-                "a",
-                { href: "#", className: "link" },
-                "Community"
-              )
+              {
+                className: "group-links " + (category.title == "jobs" || category.title == "personals" || category.title == "housing" ? "single-col" : "")
+              },
+              loopListings()
             )
           );
         });

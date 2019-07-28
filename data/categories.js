@@ -77,7 +77,7 @@ module.exports = [
     title: "jobs",
     listings: [
       {
-        name: "accounting+finance",
+        name: "accounting & finance",
         slug: "accounting-and-finance"
       },
       {
@@ -159,7 +159,7 @@ module.exports = [
         slug: "appliances"
       },
       {
-        name: "arts+crafts",
+        name: "arts & crafts",
         slug: "arts-and-crafts"
       },
       {
@@ -171,7 +171,7 @@ module.exports = [
         slug: "auto-parts"
       },
       {
-        name: "baby+kid",
+        name: "baby & kid",
         slug: "baby-and-kid"
       },
       {
@@ -179,7 +179,7 @@ module.exports = [
         slug: "barter"
       },
       {
-        name: "cars+trucks",
+        name: "cars & trucks",
         slug: "cars-and-trucks"
       }
     ]
@@ -253,7 +253,7 @@ module.exports = [
         slug: "event"
       },
       {
-        name: "farm+garden",
+        name: "farm & garden",
         slug: "farm-and-garden"
       }
     ]
