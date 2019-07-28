@@ -77,7 +77,7 @@ var App = function (_Component) {
         _react2.default.createElement(
           "div",
           null,
-          _react2.default.createElement(_reactRouterDom.Route, { path: "/", component: _Header2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { path: "/:city", component: _Header2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/", component: _Home2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/:city", component: _Home2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/:city/:category", component: _Category2.default }),
@@ -185,8 +185,16 @@ var Header = function (_Component) {
     value: function componentWillMount() {
       var self = this;
       _axios2.default.get("/api/cities").then(function (response) {
+        var _self$props = self.props,
+            match = _self$props.match,
+            history = _self$props.history;
+
+        var city = response.data.filter(function (item) {
+          return item.slug == match.params.city;
+        });
         self.setState({
-          citiesData: response.data
+          citiesData: response.data,
+          selectedCity: city[0].title
         }, function () {
           console.log(self.state);
         });

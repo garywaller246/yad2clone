@@ -18,9 +18,14 @@ export default class Header extends Component {
     axios
       .get(`/api/cities`)
       .then(function(response) {
+        const { match, history } = self.props;
+        let city = response.data.filter(item => {
+          return item.slug == match.params.city;
+        });
         self.setState(
           {
-            citiesData: response.data
+            citiesData: response.data,
+            selectedCity: city[0].title
           },
           () => {
             console.log(self.state);
