@@ -11,10 +11,16 @@ export default class Home extends Component {
     };
   }
 
-  componentWillMount() {
+  componentWillMount() {}
+
+  componentDidMount() {
+    const { match, history } = this.props;
+    if (match.params.city == undefined) {
+      history.push("/jlm");
+    }
     const self = this;
     axios
-      .get("/api/categories")
+      .get(`/api/${match.params.city}/categories`)
       .then(function(response) {
         self.setState(
           {
@@ -59,7 +65,8 @@ export default class Home extends Component {
               className={`group-links ${
                 category.title == "jobs" ||
                 category.title == "personals" ||
-                category.title == "housing"
+                category.title == "housing" ||
+                category.title == "for-sale"
                   ? "single-col"
                   : ""
               }`}
