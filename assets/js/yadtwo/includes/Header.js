@@ -28,7 +28,7 @@ export default class Header extends Component {
             selectedCity: city[0].title
           },
           () => {
-            console.log(self.state);
+            // console.log(self.state);
           }
         );
       })
