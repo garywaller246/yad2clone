@@ -434,6 +434,20 @@ var Category = function (_Component) {
       });
     };
 
+    _this.submitFilters = function () {
+      var _this$props2 = _this.props,
+          match = _this$props2.match,
+          location = _this$props2.location,
+          history = _this$props2.history;
+      var _this$state = _this.state,
+          min_price = _this$state.min_price,
+          max_price = _this$state.max_price,
+          sort = _this$state.sort,
+          select_view = _this$state.select_view;
+
+      history.push("/" + match.city + "/" + match.category + "?min_price=" + min_price + "&max_price=" + max_price + "&sort=" + sort + "&select_view=" + select_view);
+    };
+
     _this.state = {
       min_price: "0",
       max_price: "10000",
@@ -546,7 +560,7 @@ var Category = function (_Component) {
               { className: "form-group button" },
               _react2.default.createElement(
                 "div",
-                { className: "primary-btn" },
+                { className: "primary-btn", onClick: this.submitFilters },
                 "Update"
               ),
               _react2.default.createElement(

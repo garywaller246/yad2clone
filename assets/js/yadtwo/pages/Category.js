@@ -101,6 +101,16 @@ export default class Category extends Component {
     );
   };
 
+  submitFilters = () => {
+    const { match, location, history } = this.props;
+    const { min_price, max_price, sort, select_view } = this.state;
+    history.push(
+      `/${match.city}/${
+        match.category
+      }?min_price=${min_price}&max_price=${max_price}&sort=${sort}&select_view=${select_view}`
+    );
+  };
+
   render() {
     const { match, location, history } = this.props;
     return (
@@ -134,7 +144,9 @@ export default class Category extends Component {
             </div>
             {this.showMakeModelDropdown()}
             <div className="form-group button">
-              <div className="primary-btn">Update</div>
+              <div className="primary-btn" onClick={this.submitFilters}>
+                Update
+              </div>
               <div className="reset-btn">Reset</div>
             </div>
           </section>
