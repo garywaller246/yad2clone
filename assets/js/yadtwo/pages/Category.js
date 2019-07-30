@@ -105,8 +105,8 @@ export default class Category extends Component {
     const { match, location, history } = this.props;
     const { min_price, max_price, sort, select_view } = this.state;
     history.push(
-      `/${match.city}/${
-        match.category
+      `/${match.params.city}/${
+        match.params.category
       }?min_price=${min_price}&max_price=${max_price}&sort=${sort}&select_view=${select_view}`
     );
   };

@@ -445,7 +445,7 @@ var Category = function (_Component) {
           sort = _this$state.sort,
           select_view = _this$state.select_view;
 
-      history.push("/" + match.city + "/" + match.category + "?min_price=" + min_price + "&max_price=" + max_price + "&sort=" + sort + "&select_view=" + select_view);
+      history.push("/" + match.params.city + "/" + match.params.category + "?min_price=" + min_price + "&max_price=" + max_price + "&sort=" + sort + "&select_view=" + select_view);
     };
 
     _this.state = {
