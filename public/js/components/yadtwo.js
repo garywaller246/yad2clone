@@ -20,7 +20,7 @@ var _reactDom = __webpack_require__(34);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRouterDom = __webpack_require__(586);
+var _reactRouterDom = __webpack_require__(588);
 
 var _Header = __webpack_require__(265);
 
@@ -296,6 +296,10 @@ var _axios = __webpack_require__(108);
 
 var _axios2 = _interopRequireDefault(_axios);
 
+var _queryString = __webpack_require__(505);
+
+var _queryString2 = _interopRequireDefault(_queryString);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -466,15 +470,34 @@ var Category = function (_Component) {
 
       console.log(match.params.category);
       var self = this;
-      _axios2.default.get("/api/" + match.params.city + "/" + match.params.category).then(function (response) {
-        self.setState({
-          itemsData: response.data
-        }, function () {
-          console.log(self.state);
+
+      var queryParams = _queryString2.default.parse(this.props.location.search);
+      var min_price = queryParams.min_price,
+          max_price = queryParams.max_price,
+          sort = queryParams.sort,
+          select_view = queryParams.select_view;
+
+      if (queryParams.min_price != undefined) {
+        _axios2.default.get("/api/" + match.params.city + "/" + match.params.category + "?min_price=" + min_price + "&max_price=" + max_price + "&sort=" + sort + "&select_view=" + select_view).then(function (response) {
+          self.setState({
+            itemsData: response.data
+          }, function () {
+            console.log(self.state);
+          });
+        }).catch(function (error) {
+          console.log(error);
         });
-      }).catch(function (error) {
-        console.log(error);
-      });
+      } else {
+        _axios2.default.get("/api/" + match.params.city + "/" + match.params.category).then(function (response) {
+          self.setState({
+            itemsData: response.data
+          }, function () {
+            console.log(self.state);
+          });
+        }).catch(function (error) {
+          console.log(error);
+        });
+      }
     }
   }, {
     key: "render",

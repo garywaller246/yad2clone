@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
+import qs from "query-string";
 
 export default class Category extends Component {
   constructor() {
@@ -17,21 +18,46 @@ export default class Category extends Component {
     const { match, history } = this.props;
     console.log(match.params.category);
     const self = this;
-    axios
-      .get(`/api/${match.params.city}/${match.params.category}`)
-      .then(function(response) {
-        self.setState(
-          {
-            itemsData: response.data
-          },
-          () => {
-            console.log(self.state);
-          }
-        );
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
+
+    const queryParams = qs.parse(this.props.location.search);
+    const { min_price, max_price, sort, select_view } = queryParams;
+    if (queryParams.min_price != undefined) {
+      axios
+        .get(
+          `/api/${match.params.city}/${
+            match.params.category
+          }?min_price=${min_price}&max_price=${max_price}&sort=${sort}&select_view=${select_view}`
+        )
+        .then(function(response) {
+          self.setState(
+            {
+              itemsData: response.data
+            },
+            () => {
+              console.log(self.state);
+            }
+          );
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    } else {
+      axios
+        .get(`/api/${match.params.city}/${match.params.category}`)
+        .then(function(response) {
+          self.setState(
+            {
+              itemsData: response.data
+            },
+            () => {
+              console.log(self.state);
+            }
+          );
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    }
   }
 
   loopItems = () => {
