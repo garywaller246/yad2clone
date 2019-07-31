@@ -450,6 +450,14 @@ var Category = function (_Component) {
           select_view = _this$state.select_view;
 
       history.push("/" + match.params.city + "/" + match.params.category + "?min_price=" + min_price + "&max_price=" + max_price + "&sort=" + sort + "&select_view=" + select_view);
+      var queryParams = _queryString2.default.parse(_this.props.location.search);
+
+      _this.setState({
+        min_price: min_price,
+        max_price: max_price,
+        sort: sort,
+        select_view: select_view
+      });
     };
 
     _this.state = {
@@ -542,13 +550,53 @@ var Category = function (_Component) {
                   ),
                   _react2.default.createElement(
                     "option",
-                    { value: "1000" },
-                    "1000"
+                    { value: "5000" },
+                    "5000"
                   ),
                   _react2.default.createElement(
                     "option",
-                    { value: "5000" },
-                    "5000"
+                    { value: "10000" },
+                    "10000"
+                  ),
+                  _react2.default.createElement(
+                    "option",
+                    { value: "20000" },
+                    "20000"
+                  ),
+                  _react2.default.createElement(
+                    "option",
+                    { value: "30000" },
+                    "30000"
+                  ),
+                  _react2.default.createElement(
+                    "option",
+                    { value: "40000" },
+                    "40000"
+                  ),
+                  _react2.default.createElement(
+                    "option",
+                    { value: "50000" },
+                    "50000"
+                  ),
+                  _react2.default.createElement(
+                    "option",
+                    { value: "60000" },
+                    "60000"
+                  ),
+                  _react2.default.createElement(
+                    "option",
+                    { value: "70000" },
+                    "70000"
+                  ),
+                  _react2.default.createElement(
+                    "option",
+                    { value: "80000" },
+                    "80000"
+                  ),
+                  _react2.default.createElement(
+                    "option",
+                    { value: "90000" },
+                    "90000"
                   )
                 ),
                 _react2.default.createElement(
@@ -561,11 +609,6 @@ var Category = function (_Component) {
                   },
                   _react2.default.createElement(
                     "option",
-                    { value: "1000" },
-                    "1000"
-                  ),
-                  _react2.default.createElement(
-                    "option",
                     { value: "5000" },
                     "5000"
                   ),
@@ -573,6 +616,51 @@ var Category = function (_Component) {
                     "option",
                     { value: "10000" },
                     "10000"
+                  ),
+                  _react2.default.createElement(
+                    "option",
+                    { value: "20000" },
+                    "20000"
+                  ),
+                  _react2.default.createElement(
+                    "option",
+                    { value: "30000" },
+                    "30000"
+                  ),
+                  _react2.default.createElement(
+                    "option",
+                    { value: "40000" },
+                    "40000"
+                  ),
+                  _react2.default.createElement(
+                    "option",
+                    { value: "50000" },
+                    "50000"
+                  ),
+                  _react2.default.createElement(
+                    "option",
+                    { value: "60000" },
+                    "60000"
+                  ),
+                  _react2.default.createElement(
+                    "option",
+                    { value: "70000" },
+                    "70000"
+                  ),
+                  _react2.default.createElement(
+                    "option",
+                    { value: "80000" },
+                    "80000"
+                  ),
+                  _react2.default.createElement(
+                    "option",
+                    { value: "90000" },
+                    "90000"
+                  ),
+                  _react2.default.createElement(
+                    "option",
+                    { value: "100000" },
+                    "100000"
                   )
                 )
               )
