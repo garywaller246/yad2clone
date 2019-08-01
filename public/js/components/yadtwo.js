@@ -439,6 +439,7 @@ var Category = function (_Component) {
     };
 
     _this.submitFilters = function () {
+      var self = _this;
       var _this$props2 = _this.props,
           match = _this$props2.match,
           location = _this$props2.location,
@@ -449,15 +450,9 @@ var Category = function (_Component) {
           sort = _this$state.sort,
           select_view = _this$state.select_view;
 
-      history.push("/" + match.params.city + "/" + match.params.category + "?min_price=" + min_price + "&max_price=" + max_price + "&sort=" + sort + "&select_view=" + select_view);
-      var queryParams = _queryString2.default.parse(_this.props.location.search);
 
-      _this.setState({
-        min_price: min_price,
-        max_price: max_price,
-        sort: sort,
-        select_view: select_view
-      });
+      document.location.href = "/" + match.params.city + "/" + match.params.category + "?min_price=" + min_price + "&max_price=" + max_price + "&sort=" + sort + "&select_view=" + select_view;
+      var queryParams = _queryString2.default.parse(_this.props.location.search);
     };
 
     _this.state = {

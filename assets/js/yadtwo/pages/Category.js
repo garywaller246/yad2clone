@@ -128,21 +128,14 @@ export default class Category extends Component {
   };
 
   submitFilters = () => {
+    const self = this;
     const { match, location, history } = this.props;
     const { min_price, max_price, sort, select_view } = this.state;
-    history.push(
-      `/${match.params.city}/${
-        match.params.category
-      }?min_price=${min_price}&max_price=${max_price}&sort=${sort}&select_view=${select_view}`
-    );
-    const queryParams = qs.parse(this.props.location.search);
 
-    this.setState({
-      min_price,
-      max_price,
-      sort,
-      select_view
-    });
+    document.location.href = `/${match.params.city}/${
+      match.params.category
+    }?min_price=${min_price}&max_price=${max_price}&sort=${sort}&select_view=${select_view}`;
+    const queryParams = qs.parse(this.props.location.search);
   };
 
   render() {
