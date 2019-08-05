@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default class Header extends Component {
@@ -70,13 +71,14 @@ export default class Header extends Component {
   };
 
   render() {
+    const { match, history } = this.props;
     return (
       <div className="container">
         <header>
           <div className={"left-menu"}>
-            <div className={"logo"}>
+            <Link to={`/${match.params.city}`} className={"logo"}>
               <i className="fas fa-hands-helping" /> Yad Shtaim
-            </div>
+            </Link>
             <div className={"city-dropdown"} onClick={this.clickedCityDropdown}>
               {this.state.selectedCity}
               <i
@@ -94,7 +96,9 @@ export default class Header extends Component {
             </div>
           </div>
           <div className={"right-menu"}>
-            <div className={"user-img"}>image</div>
+            <div className={"user-img"}>
+              <i className="far fa-user" />
+            </div>
             <div className={"user-dropdown"}>
               My account
               <i className={`fas fa-chevron-down`} />

@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 245:
+/***/ 246:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20,25 +20,25 @@ var _reactDom = __webpack_require__(34);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRouterDom = __webpack_require__(588);
+var _reactRouterDom = __webpack_require__(154);
 
-var _Header = __webpack_require__(265);
+var _Header = __webpack_require__(266);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Home = __webpack_require__(268);
+var _Home = __webpack_require__(269);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Listings = __webpack_require__(269);
+var _Listings = __webpack_require__(270);
 
 var _Listings2 = _interopRequireDefault(_Listings);
 
-var _Details = __webpack_require__(267);
+var _Details = __webpack_require__(268);
 
 var _Details2 = _interopRequireDefault(_Details);
 
-var _Category = __webpack_require__(266);
+var _Category = __webpack_require__(267);
 
 var _Category2 = _interopRequireDefault(_Category);
 
@@ -99,7 +99,7 @@ exports.default = App;
 
 /***/ }),
 
-/***/ 265:
+/***/ 266:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -118,6 +118,8 @@ var _react2 = _interopRequireDefault(_react);
 var _reactDom = __webpack_require__(34);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _reactRouterDom = __webpack_require__(154);
 
 var _axios = __webpack_require__(108);
 
@@ -205,6 +207,10 @@ var Header = function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var _props = this.props,
+          match = _props.match,
+          history = _props.history;
+
       return _react2.default.createElement(
         "div",
         { className: "container" },
@@ -215,8 +221,8 @@ var Header = function (_Component) {
             "div",
             { className: "left-menu" },
             _react2.default.createElement(
-              "div",
-              { className: "logo" },
+              _reactRouterDom.Link,
+              { to: "/" + match.params.city, className: "logo" },
               _react2.default.createElement("i", { className: "fas fa-hands-helping" }),
               " Yad Shtaim"
             ),
@@ -246,7 +252,7 @@ var Header = function (_Component) {
             _react2.default.createElement(
               "div",
               { className: "user-img" },
-              "image"
+              _react2.default.createElement("i", { className: "far fa-user" })
             ),
             _react2.default.createElement(
               "div",
@@ -272,7 +278,7 @@ exports.default = Header;
 
 /***/ }),
 
-/***/ 266:
+/***/ 267:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -296,7 +302,7 @@ var _axios = __webpack_require__(108);
 
 var _axios2 = _interopRequireDefault(_axios);
 
-var _queryString = __webpack_require__(505);
+var _queryString = __webpack_require__(506);
 
 var _queryString2 = _interopRequireDefault(_queryString);
 
@@ -760,7 +766,7 @@ exports.default = Category;
 
 /***/ }),
 
-/***/ 267:
+/***/ 268:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -780,7 +786,7 @@ var _reactDom = __webpack_require__(34);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _Gallery = __webpack_require__(270);
+var _Gallery = __webpack_require__(271);
 
 var _Gallery2 = _interopRequireDefault(_Gallery);
 
@@ -1016,7 +1022,7 @@ exports.default = Details;
 
 /***/ }),
 
-/***/ 268:
+/***/ 269:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1035,6 +1041,8 @@ var _react2 = _interopRequireDefault(_react);
 var _reactDom = __webpack_require__(34);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _reactRouterDom = __webpack_require__(154);
 
 var _axios = __webpack_require__(108);
 
@@ -1073,13 +1081,14 @@ var Home = function (_Component) {
           var loopListings = function loopListings() {
             return category.listings.map(function (listing, index) {
               return _react2.default.createElement(
-                "a",
+                _reactRouterDom.Link,
                 {
-                  href: match.params.city + "/" + category.title + "/" + listing.slug,
-                  className: "link",
+                  to: "/" + match.params.city + "/" + category.title + "/" + listing.slug,
                   key: index
                 },
-                listing.name
+                " ",
+                listing.name,
+                " "
               );
             });
           };
@@ -1200,7 +1209,7 @@ exports.default = Home;
 
 /***/ }),
 
-/***/ 269:
+/***/ 270:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1444,7 +1453,7 @@ exports.default = Listings;
 
 /***/ }),
 
-/***/ 270:
+/***/ 271:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1583,7 +1592,7 @@ exports.default = Gallery;
 
 /***/ }),
 
-/***/ 271:
+/***/ 272:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1597,7 +1606,7 @@ var _reactDom = __webpack_require__(34);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _App = __webpack_require__(245);
+var _App = __webpack_require__(246);
 
 var _App2 = _interopRequireDefault(_App);
 
@@ -1609,4 +1618,4 @@ _reactDom2.default.render(_react2.default.createElement(_App2.default, null), ap
 
 /***/ })
 
-},[271]);
+},[272]);

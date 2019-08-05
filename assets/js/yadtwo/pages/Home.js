@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default class Home extends Component {
@@ -51,13 +52,13 @@ export default class Home extends Component {
         const loopListings = () => {
           return category.listings.map((listing, index) => {
             return (
-              <a
-                href={`${match.params.city}/${category.title}/${listing.slug}`}
-                className="link"
+              <Link
+                to={`/${match.params.city}/${category.title}/${listing.slug}`}
                 key={index}
               >
-                {listing.name}
-              </a>
+                {" "}
+                {listing.name}{" "}
+              </Link>
             );
           });
         };
